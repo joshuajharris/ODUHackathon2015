@@ -7,14 +7,20 @@
 		<ol class="breadcrumb">
 			<li><h2>Survey App</h2></li>
 			<li><a href="#">About</a></li>
+      {{#if currentUser}}
+      <li><a class="profileLink" href="#">Profile</a></li>
+      {{/if}}
 			<li>  {{> loginButtons }} </li>
 		</ol>
 	</nav>
 
+  <h1>Welcome to survey tools!</h1>
   {{#if currentUser}}
-    login successful 
+    {{#if isProfileState}}
+      {{> profile }}
+    {{/if}} 
   {{else}}
-    <div>
+    <div id="form-container">
       {{> register}}
     </div>
   {{/if}}
@@ -49,3 +55,14 @@
 </div>
 </template>
 
+<template name="profile">
+<h2>{{fname}}'s Profile</h2>
+<form class="edit-profile">
+  <input type="email" name="email" placeholder="email"/>
+  <input type="password" name="pass" placeholder="password"/>
+  <input type="password" name="passConfirm" placeholder="confirm password"/>
+  <input type="text" name="first" placeholder="First Name"/>
+  <input type="text" name="last" placeholder="Last Name"/>
+  <input type="submit" value="Submit Changes"/>
+</form>
+</template>
