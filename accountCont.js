@@ -1,7 +1,7 @@
 if(Meteor.isClient) {
 
   Template.register.events({
-    "submit .register-form": function(event){
+    "submit form": function(event){
       
       var email = event.target.email.value;
       var pass = event.target.password.value;

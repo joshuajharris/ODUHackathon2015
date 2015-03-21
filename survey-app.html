@@ -14,7 +14,7 @@
   <h1>Welcome to survey tools!</h1>
 
   {{#if currentUser}}
-    login successful 
+    {{> profile }} 
   {{else}}
     <div id="form-container">
       {{> register}}
@@ -23,6 +23,7 @@
 </body>
 
 <template name="register">
+<h2>Register</h2>
 <form class="register-form">
   <input type="email" name="email" placeholder="Please enter email"/>
   <input type="password" name="password" placeholder="Please enter password"/>
@@ -31,3 +32,14 @@
 </form>
 </template>
 
+<template name="profile">
+<h2>Profile</h2>
+<form class="edit-profile">
+  <input type="email" name="email" placeholder="email"/>
+  <input type="password" name="pass" placeholder="password"/>
+  <input type="password" name="passConfirm" placeholder="confirm password"/>
+  <input type="text" name="first" placeholder="First Name"/>
+  <input type="text" name="last" placeholder="Last Name"/>
+  <input type="submit" value="Submit Changes"/>
+</form>
+</template>
