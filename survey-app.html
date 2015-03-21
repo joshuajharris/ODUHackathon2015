@@ -10,10 +10,26 @@
 			<li>  {{> loginButtons }} </li>
 		</ol>
 	</nav>
+<<<<<<< HEAD
+=======
+  <h1>Welcome to survey tools!</h1>
+
+  {{#if currentUser}}
+    login successful 
+  {{else}}
+    <div>
+      {{> register}}
+    </div>
+  {{/if}}
+>>>>>>> b6ea240dfe9d08d61dcd725a8e80c5c661464198
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="register">
+<form class="register-form">
+  <input type="email" id="register-email" placeholder="Please enter email">
+  <input type="password" id="register-password" placeholder="Please enter password">
+  <input type="password" id="password-confirm" placeholder="confirm password">
+  <input type="submit" value="Register">
+</form>
 </template>
 
