@@ -10,12 +10,16 @@
 			<li>  {{> loginButtons }} </li>
 		</ol>
 	</nav>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9d5a67a34909f0a4ea5ddae22a63a5fec90b8d6f
   <h1>Welcome to survey tools!</h1>
 
   {{#if currentUser}}
     login successful 
   {{else}}
-    <div>
+    <div id="form-container">
       {{> register}}
     </div>
   {{/if}}
@@ -23,10 +27,10 @@
 
 <template name="register">
 <form class="register-form">
-  <input type="email" id="register-email" placeholder="Please enter email">
-  <input type="password" id="register-password" placeholder="Please enter password">
-  <input type="password" id="password-confirm" placeholder="confirm password">
-  <input type="submit" value="Register">
+  <input type="email" name="email" placeholder="Please enter email"/>
+  <input type="password" name="password" placeholder="Please enter password"/>
+  <input type="password" name="passConfirm" placeholder="confirm password"/>
+  <input type="submit" value="Register"/>
 </form>
 </template>
 
