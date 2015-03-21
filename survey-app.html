@@ -38,9 +38,13 @@
 </template>
 
 <template name="profile">
-<h2>{{fname}}'s Profile</h2>
+<h2>{{fname}} {{lname}}'s Profile</h2>
 <form class="edit-profile">
-  <input type="email" name="email" placeholder="email"/>
+  {{#if changeEmail}}
+    <input type="email" name="email" placeholder="email"/>
+  {{else}}
+  Name: {{fname}} <a class="changeEmailLink" href="#">change</a> 
+  {{/if}}
   <input type="password" name="pass" placeholder="password"/>
   <input type="password" name="passConfirm" placeholder="confirm password"/>
   <input type="text" name="first" placeholder="First Name"/>
