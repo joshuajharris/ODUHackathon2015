@@ -1,1 +1,19 @@
-/* CSS declarations go here */
+.form-control{
+	width: auto;
+	margin: 0 auto;
+}
+
+.inner{
+	width: 50%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+
+body{
+	background-color: #e74c3c;
+}
+
+.btn{
+	width: 50%;
+	margin: 0 auto;
+}

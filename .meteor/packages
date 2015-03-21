@@ -10,6 +10,9 @@ insecure
 twbs:bootstrap
 accounts-ui
 accounts-password
+<<<<<<< HEAD
+=======
 aldeed:autoform
 aldeed:collection2
 bootstrap
+>>>>>>> 07b223ab646cf9588c822bba24c4679498916e1e
