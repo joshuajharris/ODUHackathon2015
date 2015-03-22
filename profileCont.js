@@ -1,17 +1,16 @@
 if(Meteor.isClient) {
-  Session.setDefault('fname', '[Edit name in profile]');
-
-  var changeEmail = false;
+  Session.setDefault('fname', 'Add a name');
+  Session.setDefault('changeEmail', false);
 
   Template.profile.helpers({
     fname: function(){ return Session.get('fname') },
     lname: function(){ return Session.get('lname') },
-    changeEmail: function(){ return changeEmail }
+    canChangeEmail: function(){ return Session.get('changeEmail') }
   });
 
   Template.profile.events({
     'click .changeEmailLink': function(){
-      changeEmail = true; 
+      Session.set('changeEmail', true);
     },
     'submit form': function(event){
       event.preventDefault();
@@ -21,13 +20,16 @@ if(Meteor.isClient) {
           passConfirm = event.target.passConfirm.value,
           first = event.target.first.value,
           last = event.target.last.value;
-/*
+      if(email){
+        event.target.email.value = "";
+        Session.set('changeEmail',false);
+      }
       if(pass == passConfirm){
-        Meteor.users.update({_id:Meteor.user()._id},{$set:{"password":pass}});
+        //Meteor.users.update({_id:Meteor.user()._id},{$set:{"password":pass}});
         event.target.pass.value = "";
         event.target.passConfirm.value= "";
       }
-*/
+
       if(first) {
         Session.set('fname', first);
         Meteor.users.update({_id:Meteor.user()._id},{$set:{"profile.fname":first}});

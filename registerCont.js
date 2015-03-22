@@ -12,8 +12,6 @@ if(Meteor.isClient) {
           username: uName,
           password: pass
         });
-
-        Meteor.users.update({_id:Meteor.user()._id},{$set:{"profile.score": 0}});
       }
 
       return false;
@@ -26,5 +24,4 @@ if(Meteor.isClient) {
 };
 
 if(Meteor.isServer) {
-
 };

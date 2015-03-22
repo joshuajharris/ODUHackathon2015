@@ -66,16 +66,16 @@
 <template name="profile">
 <div class="well">
 <h2>{{fname}} {{lname}}'s Profile</h2>
-<form class="form-horizontal">
+<form id="profileForm" class="form-horizontal">
   {{#if canChangeEmail}}
-    <input type="email" name="email" placeholder="email"/>
+  <input type="email" name="email" placeholder="email"/><br/>
   {{else}}
-    Name: {{fname}} <a class="changeEmailLink" href="#">change</a> 
+  Email  <a class="changeEmailLink" href="#">change</a><br/>
   {{/if}}
-  <input type="password" name="pass" placeholder="password"/>
-  <input type="password" name="passConfirm" placeholder="confirm password"/>
-  <input type="text" name="first" placeholder="First Name"/>
-  <input type="text" name="last" placeholder="Last Name"/>
+  <input type="password" name="pass" placeholder="password"/><br/>
+  <input type="password" name="passConfirm" placeholder="confirm password"/><br/>
+  <input type="text" name="first" placeholder="First Name"/><br/>
+  <input type="text" name="last" placeholder="Last Name"/><br/>
   <input type="submit" class="btn btn-primary" value="Submit Changes"/>
 </form>
 </div>
