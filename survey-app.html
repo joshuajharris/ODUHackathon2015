@@ -16,7 +16,11 @@
 
   {{#if currentUser}}
     {{#if isHomeState}}
-      {{> question}}
+      {{#each questions}}
+        {{#if unanswered}}
+          {{> question}}
+        {{/if}}
+      {{/each}}
     {{/if}}
     {{#if isProfileState}}
       {{> profile }}
@@ -78,5 +82,9 @@
 </template>
 
 <template name="question">
-  <p>Here's your q:</p>
+  <p>Here's your q: {{question}} </p>
+  <form>
+    <input class="answer" type="text"/>
+    <input type="submit" value="Answer"/>
+  </form>
 </template>
