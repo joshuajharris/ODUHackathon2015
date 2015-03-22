@@ -1,10 +1,18 @@
 if(Meteor.isClient) {
+  Session.setDefault('fname', '[Edit name in profile]');
+
+  var changeEmail = false;
 
   Template.profile.helpers({
-    fname: function(){ return Session.get('fname') }
+    fname: function(){ return Session.get('fname') },
+    lname: function(){ return Session.get('lname') },
+    changeEmail: function(){ return changeEmail }
   });
 
   Template.profile.events({
+    'click .changeEmailLink': function(event){
+     changeEmail = true; 
+    },
     'submit .edit-profile': function(event){
       event.preventDefault();
 
@@ -27,6 +35,7 @@ if(Meteor.isClient) {
       }
 
       if(last) {
+        Session.set('lname', last);
         Meteor.users.update({_id:Meteor.user()._id},{$set:{"profile.lname":last}});
         event.target.last.value = "";
       } 
