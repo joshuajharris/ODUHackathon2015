@@ -10,5 +10,8 @@ if (Meteor.isClient) {
     }
 
   });
-
+Question.insert({question:"Foobar"})
+Question.insert({question:"Foo"})
+Question.insert({question:"Foob"})
+Question.insert({question:"Foobar"})
 }

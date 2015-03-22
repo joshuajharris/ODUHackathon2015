@@ -24,10 +24,6 @@ Survey.attachSchema(new SimpleSchema({
   	max: 10
   }
 	}));
-Survey.insert({question:"Hello",response:"",duration:30,description:"lalla",weight: 2});
-Survey.insert({question:"Helasdasdlo",response:"as",duration:30,description:"lalla",weight: 2});
-Survey.insert({question:"Heasdasadasllo",response:"asdasd",duration:30,description:"lalla",weight: 2});
-Survey.insert({question:"HeZXllo"},{response:"zxZX"},{duration:30},{description:"aalalla"},{weight: 2});
 }
 
 if (Meteor.isClient) {
