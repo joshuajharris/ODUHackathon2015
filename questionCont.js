@@ -2,12 +2,17 @@ Questions = new Mongo.Collection("questions");
 
 if(Meteor.isClient){
   
+  Session.setDefault('score', 0);
+
   Template.body.helpers({
-    questions: function(){ return Questions.find({})}
+    questions: function(){ return Questions.find({})},
+    score: function(){ return Session.get('score')}
   });
   Template.question.events({
-    'submit form':function(event){
-      
+    'submit form':function(event, t){
+      event.preventDefault();
+      event.target[0].value = "";
+      Session.set('score', Session.get('score') + 1);
     }
   });
 

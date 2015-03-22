@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-  Session.setDefault('state', 'register');
+  Session.setDefault('state', 'home');
   // allow body to get state
   Template.body.helpers({
     state: function(){ return Session.get('state') },

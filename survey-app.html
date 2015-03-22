@@ -7,10 +7,11 @@
 		<ol class="breadcrumb">
 			<li><h2><a class="homeLink" href="#">Survey App</a></h2></li>
 			<li><a href="#">About</a></li>
+			<li>  {{> loginButtons }} </li>
       {{#if currentUser}}
         <li><a class="profileLink" href="#">Profile</a></li>
+        <li>Score {{score}}</li>
       {{/if}}
-			<li>  {{> loginButtons }} </li>
 		</ol>
 	</nav>
 
@@ -67,11 +68,7 @@
 <div class="well">
 <h2>{{fname}} {{lname}}'s Profile</h2>
 <form id="profileForm" class="form-horizontal">
-  {{#if canChangeEmail}}
   <input type="email" name="email" placeholder="email"/><br/>
-  {{else}}
-  Email  <a class="changeEmailLink" href="#">change</a><br/>
-  {{/if}}
   <input type="password" name="pass" placeholder="password"/><br/>
   <input type="password" name="passConfirm" placeholder="confirm password"/><br/>
   <input type="text" name="first" placeholder="First Name"/><br/>
