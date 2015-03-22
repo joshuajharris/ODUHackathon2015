@@ -6,7 +6,7 @@
 .inner{
 	width: 50%;
 	margin: 0 auto;
-	background-color: #FFFFFF;
+	background-color: #F5F5F5;
 }
 
 body{
@@ -16,4 +16,7 @@ body{
 .btn{
 	width: 50%;
 	margin: 0 auto;
+}
+.form-horizontal{
+	margin-left: 35%;
 }
