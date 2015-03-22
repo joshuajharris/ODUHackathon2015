@@ -1,6 +1,6 @@
 if(Meteor.isClient) {
 
-Survey = new Mongo.Collection("Questions");
+Survey = new Mongo.Collection("Survey");
 
 Survey.attachSchema(new SimpleSchema({
   question: {
@@ -29,7 +29,7 @@ Survey.attachSchema(new SimpleSchema({
 if (Meteor.isClient) {
   // This code only runs on the client
   Template.Survey.helpers({
-    tasks: function () {
+    survey: function () {
       return Survey.find({});
     }
   });
