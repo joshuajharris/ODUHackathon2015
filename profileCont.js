@@ -10,7 +10,7 @@ if(Meteor.isClient) {
   });
 
   Template.profile.events({
-    'click .changeEmailLink': function(event){
+    'click .changeEmailLink': function(){
       changeEmail = true; 
     },
     'submit .edit-profile': function(event){

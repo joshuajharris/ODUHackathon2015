@@ -66,7 +66,7 @@
 <template name="profile">
 <h2>{{fname}} {{lname}}'s Profile</h2>
 <form class="edit-profile">
-  {{#if changeEmail}}
+  {{#if canChangeEmail}}
     <input type="email" name="email" placeholder="email"/>
   {{else}}
     Name: {{fname}} <a class="changeEmailLink" href="#">change</a> 
@@ -80,9 +80,11 @@
 </template>
 
 <template name="question">
-  <p>Here's your q: {{question}} </p>
+<div>
+        <p>{{question}}</p>
   <form>
     <input class="answer" type="text"/>
     <input type="submit" value="Answer"/>
   </form>
+</div>
 </template>
