@@ -5,7 +5,7 @@
 <body>
 	<nav class="navbar navbar-default">
 		<ol class="breadcrumb">
-			<li><h2>Survey App</h2></li>
+			<li><h2><a class="homeLink" href="#">Survey App</a></h2></li>
 			<li><a href="#">About</a></li>
       {{#if currentUser}}
       <li><a class="profileLink" href="#">Profile</a></li>
@@ -15,6 +15,9 @@
 	</nav>
 
   {{#if currentUser}}
+    {{#if isHomeState}}
+      {{> question}}
+    {{/if}}
     {{#if isProfileState}}
       {{> profile }}
     {{/if}} 
@@ -74,4 +77,8 @@
   <input type="text" name="last" placeholder="Last Name"/>
   <input type="submit" value="Submit Changes"/>
 </form>
+</template>
+
+<template name="question">
+  <p>Here's your q:</p>
 </template>
