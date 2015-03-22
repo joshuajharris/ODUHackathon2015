@@ -1,5 +1,3 @@
-if(Meteor.isClient) {
-
 Survey = new Mongo.Collection("Survey");
 
 Survey.attachSchema(new SimpleSchema({
@@ -24,7 +22,6 @@ Survey.attachSchema(new SimpleSchema({
   	max: 10
   }
 	}));
-}
 
 if (Meteor.isClient) {
   // This code only runs on the client
