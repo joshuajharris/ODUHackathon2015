@@ -10,7 +10,10 @@
 }
 
 body{
-	background-color: #e74c3c;
+
+	background-image: url("pic2.jpg");
+	background-size: 100%;
+
 }
 
 .btn{
