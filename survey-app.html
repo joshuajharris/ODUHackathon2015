@@ -8,7 +8,7 @@
 			<li><h2>Survey App</h2></li>
 			<li><a href="#">About</a></li>
       {{#if currentUser}}
-      <li><a class="profileLink" href="#">Profile</a></li>
+        <li><a class="profileLink" href="#">Profile</a></li>
       {{/if}}
 			<li>  {{> loginButtons }} </li>
 		</ol>
@@ -19,9 +19,7 @@
       {{> profile }}
     {{/if}} 
   {{else}}
-    <div id="form-container">
-      {{> register}}
-    </div>
+    {{> register}}
   {{/if}}
 </body>
 
@@ -66,7 +64,7 @@
   {{#if changeEmail}}
     <input type="email" name="email" placeholder="email"/>
   {{else}}
-  Name: {{fname}} <a class="changeEmailLink" href="#">change</a> 
+    Name: {{fname}} <a class="changeEmailLink" href="#">change</a> 
   {{/if}}
   <input type="password" name="pass" placeholder="password"/>
   <input type="password" name="passConfirm" placeholder="confirm password"/>
