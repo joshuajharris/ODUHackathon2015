@@ -5,6 +5,6 @@ Site to help researchers improve the student survey experience.  Done for the Mo
 A live preview can be find [here](http://oduhackathon.meteor.com)
 
 ##Members
--[Joshua Harris](https://github.com/joshuajharris, "Joshua's Github")
--[Jian Carlo](https://github.com/jiancarlo, "Jian's Github")
--[Tucker Wash](https://github.com/washt, "Tucker's Github")
+- [Joshua Harris](https://github.com/joshuajharris, "Joshua's Github")
+- [Jian Carlo](https://github.com/jiancarlo, "Jian's Github")
+- [Tucker Wash](https://github.com/washt, "Tucker's Github")
