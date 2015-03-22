@@ -64,8 +64,9 @@
 </template>
 
 <template name="profile">
+<div class="well">
 <h2>{{fname}} {{lname}}'s Profile</h2>
-<form class="edit-profile">
+<form class="form-horizontal">
   {{#if canChangeEmail}}
     <input type="email" name="email" placeholder="email"/>
   {{else}}
@@ -75,14 +76,15 @@
   <input type="password" name="passConfirm" placeholder="confirm password"/>
   <input type="text" name="first" placeholder="First Name"/>
   <input type="text" name="last" placeholder="Last Name"/>
-  <input type="submit" value="Submit Changes"/>
+  <input type="submit" class="btn btn-primary" value="Submit Changes"/>
 </form>
+</div>
 </template>
 
 <template name="question">
-<div>
-        <p>{{question}}</p>
-  <form>
+<div class="well">
+    <p>{{question}}</p>
+  <form class="form-horizontal">
     <input class="answer" type="text"/>
     <input type="submit" value="Answer"/>
   </form>

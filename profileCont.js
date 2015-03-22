@@ -13,7 +13,7 @@ if(Meteor.isClient) {
     'click .changeEmailLink': function(){
       changeEmail = true; 
     },
-    'submit .edit-profile': function(event){
+    'submit form': function(event){
       event.preventDefault();
 
       var email = event.target.email.value,
